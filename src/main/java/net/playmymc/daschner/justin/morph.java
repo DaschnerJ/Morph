@@ -1,7 +1,9 @@
 package net.playmymc.daschner.justin;
 
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.playmymc.daschner.justin.blocks.BlockTestOre;
+import net.playmymc.daschner.justin.items.ItemTestIngot;
 import net.playmymc.daschner.justin.reference.reference;
 import net.playmymc.daschner.justin.reference.register;
 import cpw.mods.fml.common.Mod;
@@ -14,6 +16,9 @@ public class morph
 	//Block Variables
 	public static Block testOre;
 	
+	//Item Variables
+	public static Item testIngot;
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
@@ -21,6 +26,12 @@ public class morph
 		testOre = new BlockTestOre();
 		
 		register.registerBlock(testOre);
+		
+		//Register Items
+		
+		testIngot = new ItemTestIngot();
+		
+		register.registerItem(testIngot);
 	}
 	
 	
