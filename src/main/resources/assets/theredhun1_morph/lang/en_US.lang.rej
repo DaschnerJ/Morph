@@ -1,0 +1,6 @@
+diff a/src/main/resources/assets/theredhun1_morph/lang/en_US.lang b/src/main/resources/assets/theredhun1_morph/lang/en_US.lang	(rejected hunks)
+@@ -1,3 +0,2 @@
+-tile.testOre.name=Test Ore
+\ No newline at end of file
+ tile.testOre.name=Test Ore
+ 

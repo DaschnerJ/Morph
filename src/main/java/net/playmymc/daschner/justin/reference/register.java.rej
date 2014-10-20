@@ -1,0 +1,9 @@
+diff a/src/main/java/net/playmymc/daschner/justin/reference/register.java b/src/main/java/net/playmymc/daschner/justin/reference/register.java	(rejected hunks)
+@@ -2,7 +2,6 @@
+ 
+ import cpw.mods.fml.common.registry.GameRegistry;
+ import net.minecraft.block.Block;
+-import net.minecraft.creativetab.CreativeTabs;
+ 
+ public class register 
+ {
