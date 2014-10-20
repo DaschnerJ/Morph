@@ -3,7 +3,10 @@ package net.playmymc.daschner.justin;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.playmymc.daschner.justin.blocks.BlockTestOre;
+import net.playmymc.daschner.justin.items.ItemBlueMorph;
+import net.playmymc.daschner.justin.items.ItemRedMorph;
 import net.playmymc.daschner.justin.items.ItemTestIngot;
+import net.playmymc.daschner.justin.items.ItemYellowMorph;
 import net.playmymc.daschner.justin.reference.reference;
 import net.playmymc.daschner.justin.reference.register;
 import cpw.mods.fml.common.Mod;
@@ -19,14 +22,9 @@ public class morph
 	//Item Variables
 	public static Item testIngot;
 	
-	//GUI Variables
-	public static Block sacrificeTable;
-
-	public static morph instance;
-	
-	public static final int guiIDSacrificeTable = 1;
-	
-	
+	public static Item yellowMorph;
+	public static Item blueMorph;
+	public static Item redMorph;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
@@ -35,12 +33,14 @@ public class morph
 		testOre = new BlockTestOre();
 		
 		register.registerBlock(testOre);
+	
 		
-		register.registerBlock(sacrificeTable);
-		
-		//Register Items
-		
+		//Register Items	
 		testIngot = new ItemTestIngot();
+		
+		yellowMorph = new ItemYellowMorph();
+		blueMorph = new ItemBlueMorph();
+		redMorph = new ItemRedMorph();
 		
 		register.registerItem(testIngot);
 	}

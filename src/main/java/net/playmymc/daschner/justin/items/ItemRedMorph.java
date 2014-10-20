@@ -4,12 +4,12 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.playmymc.daschner.justin.reference.reference;
 
-public class ItemTestIngot extends Item 
+public class ItemRedMorph extends Item 
 {
-	public ItemTestIngot()
+	public ItemRedMorph()
 	{
 		super();
-		setUnlocalizedName("testIngot");
+		setUnlocalizedName("redMorph");
 		setTextureName(reference.MODID + ":" + getUnlocalizedName().substring(5));
 		setCreativeTab(CreativeTabs.tabMaterials);
 	}
