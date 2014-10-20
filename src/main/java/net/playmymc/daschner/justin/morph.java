@@ -5,6 +5,7 @@ import net.minecraft.item.Item;
 import net.playmymc.daschner.justin.blocks.BlockGraliteOre;
 import net.playmymc.daschner.justin.blocks.BlockTestOre;
 import net.playmymc.daschner.justin.items.ItemBlueMorph;
+import net.playmymc.daschner.justin.items.ItemGraliteMorph;
 import net.playmymc.daschner.justin.items.ItemRedMorph;
 import net.playmymc.daschner.justin.items.ItemTestIngot;
 import net.playmymc.daschner.justin.items.ItemYellowMorph;
@@ -24,6 +25,7 @@ public class morph
 	//Item Variables
 	public static Item testIngot;
 	
+	public static Item graliteMorph;
 	public static Item yellowMorph;
 	public static Item blueMorph;
 	public static Item redMorph;
@@ -42,12 +44,14 @@ public class morph
 		//Register Items	
 		testIngot = new ItemTestIngot();
 		
+		graliteMorph = new ItemGraliteMorph();
 		yellowMorph = new ItemYellowMorph();
 		blueMorph = new ItemBlueMorph();
 		redMorph = new ItemRedMorph();
 		
 		register.registerItem(testIngot);
 		
+		register.registerItem(graliteMorph);
 		register.registerItem(yellowMorph);
 		register.registerItem(blueMorph);
 		register.registerItem(redMorph);
