@@ -43,6 +43,10 @@ public class morph
 		redMorph = new ItemRedMorph();
 		
 		register.registerItem(testIngot);
+		
+		register.registerItem(yellowMorph);
+		register.registerItem(blueMorph);
+		register.registerItem(redMorph);
 	}
 	
 	
