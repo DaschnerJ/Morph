@@ -19,6 +19,15 @@ public class morph
 	//Item Variables
 	public static Item testIngot;
 	
+	//GUI Variables
+	public static Block sacrificeTable;
+
+	public static morph instance;
+	
+	public static final int guiIDSacrificeTable = 1;
+	
+	
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
@@ -26,6 +35,8 @@ public class morph
 		testOre = new BlockTestOre();
 		
 		register.registerBlock(testOre);
+		
+		register.registerBlock(sacrificeTable);
 		
 		//Register Items
 		
