@@ -39,7 +39,6 @@ public class morph
 		
 		register.registerBlock(testOre);
 		register.registerBlock(graliteOre);
-	
 		
 		//Register Items	
 		testIngot = new ItemTestIngot();
@@ -55,6 +54,9 @@ public class morph
 		register.registerItem(yellowMorph);
 		register.registerItem(blueMorph);
 		register.registerItem(redMorph);
+		
+		//Register Crafting Recipes
+		register.registerRecipes();
 	}
 	
 	
