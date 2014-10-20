@@ -2,6 +2,7 @@ package net.playmymc.daschner.justin;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.playmymc.daschner.justin.blocks.BlockGraliteOre;
 import net.playmymc.daschner.justin.blocks.BlockTestOre;
 import net.playmymc.daschner.justin.items.ItemBlueMorph;
 import net.playmymc.daschner.justin.items.ItemRedMorph;
@@ -18,6 +19,7 @@ public class morph
 {
 	//Block Variables
 	public static Block testOre;
+	public static Block graliteOre;
 	
 	//Item Variables
 	public static Item testIngot;
@@ -31,8 +33,10 @@ public class morph
 	{
 		//Register Blocks
 		testOre = new BlockTestOre();
+		graliteOre = new BlockGraliteOre();
 		
 		register.registerBlock(testOre);
+		register.registerBlock(graliteOre);
 	
 		
 		//Register Items	
