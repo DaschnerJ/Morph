@@ -35,4 +35,10 @@ public class register
 				    	Items.redstone, new ItemStack(morph.graliteMorph, 3)
 				});
 	}
+	
+	public static void registerWorldGen()
+	{
+		GameRegistry.registerWorldGenerator(morph.eventWorldGen, 0);
+	}
+	
 }

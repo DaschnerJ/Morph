@@ -20,6 +20,7 @@ import net.playmymc.daschner.justin.items.ItemWhiteMorph;
 import net.playmymc.daschner.justin.items.ItemYellowMorph;
 import net.playmymc.daschner.justin.reference.reference;
 import net.playmymc.daschner.justin.reference.register;
+import net.playmymc.daschner.justin.worldgen.MorphWorldGen;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -27,6 +28,9 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = reference.MODID, version = reference.VERSION)
 public class morph 
 {
+	//World Gen Variable
+	public static MorphWorldGen eventWorldGen = new MorphWorldGen();
+	
 	//Block Variables
 	public static Block testOre;
 	
@@ -108,6 +112,9 @@ public class morph
 		
 		//Register Crafting Recipes
 		register.registerRecipes();
+		
+		//Register World Generator
+		register.registerWorldGen();
 	}
 	
 	
