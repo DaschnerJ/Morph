@@ -46,21 +46,21 @@ item.whitePickaxe.name=White Pickaxe
 item.blackPickaxe.name=Black Pickaxe
 item.brownPickaxe.name=Brown Pickaxe
 
-item.yellowShovel.name=Yellow Spade
-item.blueShovel.name=Blue Spade
-item.redShovel.name=Red Spade
+item.yellowSpade.name=Yellow Shovel
+item.blueSpade.name=Blue Shovel
+item.redSpade.name=Red Shovel
 
-item.greenShovel.name=Green Spade
-item.purpleShovel.name=Purple Spade
-item.orangeShovel.name=Orange Spade
+item.greenSpade.name=Green Shovel
+item.purpleSpade.name=Purple Shovel
+item.orangeSpade.name=Orange Shovel
 
-item.tealShovel.name=Teal Spade
-item.indigoShovel.name=Indigo Spade
-item.maroonShovel.name=Maroon Spade
+item.tealSpade.name=Teal Shovel
+item.indigoSpade.name=Indigo Shovel
+item.maroonSpade.name=Maroon Shovel
 
-item.whiteShovel.name=White Spade
-item.blackShovel.name=Black Spade
-item.brownShovel.name=Brown Spade
+item.whiteSpade.name=White Shovel
+item.blackSpade.name=Black Shovel
+item.brownSpade.name=Brown Shovel
 
 item.yellowAxe.name=Yellow Axe
 item.blueAxe.name=Blue Axe

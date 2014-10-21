@@ -1,7 +1,29 @@
-<<<<<<< .merge_file_a11272
 tile.testOre.name=Test Ore
 
+tile.graliteOre.name=Gralite Ore
+
 item.testIngot.name=Test Ingot
+
+item.graliteMorph.name=Gralite Dust
+
+item.yellowMorph.name=Yellow Morph Essence
+item.blueMorph.name=Blue Morph Essence
+item.redMorph.name=Red Morph Essence
+<<<<<<< HEAD
+item.graliteMorph.name=Gralite Dust
+
+tile.Log.Lucem.name=Lucem Wood
 =======
-tile.testOre.name=Test Ore
->>>>>>> .merge_file_a07560
+
+item.greenMorph.name=Green Morph Essence
+item.purpleMorph.name=Purple Morph Essence
+item.orangeMorph.name=Orange Morph Essence
+
+item.tealMorph.name=Teal Morph Essence
+item.indigoMorph.name=Indigo Morph Essence
+item.maroonMorph.name=Maroon Morph Essence
+
+item.whiteMorph.name=White Morph Essence
+item.blackMorph.name=Black Morph Essence
+item.brownMorph.name=Brown Morph Essence
+>>>>>>> origin/master
