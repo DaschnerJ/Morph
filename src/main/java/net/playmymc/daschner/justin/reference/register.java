@@ -40,4 +40,9 @@ public class register
 		GameRegistry.registerWorldGenerator(morph.eventWorldGen, 0);
 	}
 	
+	public static void registerSmeltingRecipes()
+	{
+		GameRegistry.addSmelting(new ItemStack(morph.solusDust, 1), new ItemStack(morph.solusMetalicOrb, 1), 6.0F);
+	}
+	
 }

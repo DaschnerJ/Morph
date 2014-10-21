@@ -3,6 +3,8 @@ package net.playmymc.daschner.justin;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraftforge.common.util.EnumHelper;
 import net.playmymc.daschner.justin.blocks.BlockGraliteOre;
 import net.playmymc.daschner.justin.blocks.BlockLucemLeaves;
 import net.playmymc.daschner.justin.blocks.BlockLucemLog;
@@ -12,10 +14,10 @@ import net.playmymc.daschner.justin.items.ItemBlackMorph;
 import net.playmymc.daschner.justin.items.ItemBlueMorph;
 import net.playmymc.daschner.justin.items.ItemBrownMorph;
 import net.playmymc.daschner.justin.items.ItemGraliteMorph;
-import net.playmymc.daschner.justin.items.ItemLeafBlocks;
-import net.playmymc.daschner.justin.items.ItemLogBlocks;
 import net.playmymc.daschner.justin.items.ItemGreenMorph;
 import net.playmymc.daschner.justin.items.ItemIndigoMorph;
+import net.playmymc.daschner.justin.items.ItemLeafBlocks;
+import net.playmymc.daschner.justin.items.ItemLogBlocks;
 import net.playmymc.daschner.justin.items.ItemMaroonMorph;
 import net.playmymc.daschner.justin.items.ItemOrangeMorph;
 import net.playmymc.daschner.justin.items.ItemPurpleMorph;
@@ -28,6 +30,54 @@ import net.playmymc.daschner.justin.items.ItemWhiteMorph;
 import net.playmymc.daschner.justin.items.ItemYellowMorph;
 import net.playmymc.daschner.justin.reference.reference;
 import net.playmymc.daschner.justin.reference.register;
+import net.playmymc.daschner.justin.tools.axes.ToolBlackAxe;
+import net.playmymc.daschner.justin.tools.axes.ToolBlueAxe;
+import net.playmymc.daschner.justin.tools.axes.ToolBrownAxe;
+import net.playmymc.daschner.justin.tools.axes.ToolGreenAxe;
+import net.playmymc.daschner.justin.tools.axes.ToolIndigoAxe;
+import net.playmymc.daschner.justin.tools.axes.ToolMaroonAxe;
+import net.playmymc.daschner.justin.tools.axes.ToolOrangeAxe;
+import net.playmymc.daschner.justin.tools.axes.ToolPurpleAxe;
+import net.playmymc.daschner.justin.tools.axes.ToolRedAxe;
+import net.playmymc.daschner.justin.tools.axes.ToolTealAxe;
+import net.playmymc.daschner.justin.tools.axes.ToolWhiteAxe;
+import net.playmymc.daschner.justin.tools.axes.ToolYellowAxe;
+import net.playmymc.daschner.justin.tools.hoes.ToolBlackHoe;
+import net.playmymc.daschner.justin.tools.hoes.ToolBlueHoe;
+import net.playmymc.daschner.justin.tools.hoes.ToolBrownHoe;
+import net.playmymc.daschner.justin.tools.hoes.ToolGreenHoe;
+import net.playmymc.daschner.justin.tools.hoes.ToolIndigoHoe;
+import net.playmymc.daschner.justin.tools.hoes.ToolMaroonHoe;
+import net.playmymc.daschner.justin.tools.hoes.ToolOrangeHoe;
+import net.playmymc.daschner.justin.tools.hoes.ToolPurpleHoe;
+import net.playmymc.daschner.justin.tools.hoes.ToolRedHoe;
+import net.playmymc.daschner.justin.tools.hoes.ToolTealHoe;
+import net.playmymc.daschner.justin.tools.hoes.ToolWhiteHoe;
+import net.playmymc.daschner.justin.tools.hoes.ToolYellowHoe;
+import net.playmymc.daschner.justin.tools.pickaxes.ToolBlackPickaxe;
+import net.playmymc.daschner.justin.tools.pickaxes.ToolBluePickaxe;
+import net.playmymc.daschner.justin.tools.pickaxes.ToolBrownPickaxe;
+import net.playmymc.daschner.justin.tools.pickaxes.ToolGreenPickaxe;
+import net.playmymc.daschner.justin.tools.pickaxes.ToolIndigoPickaxe;
+import net.playmymc.daschner.justin.tools.pickaxes.ToolMaroonPickaxe;
+import net.playmymc.daschner.justin.tools.pickaxes.ToolOrangePickaxe;
+import net.playmymc.daschner.justin.tools.pickaxes.ToolPurplePickaxe;
+import net.playmymc.daschner.justin.tools.pickaxes.ToolRedPickaxe;
+import net.playmymc.daschner.justin.tools.pickaxes.ToolTealPickaxe;
+import net.playmymc.daschner.justin.tools.pickaxes.ToolWhitePickaxe;
+import net.playmymc.daschner.justin.tools.pickaxes.ToolYellowPickaxe;
+import net.playmymc.daschner.justin.tools.shovels.ToolBlackShovel;
+import net.playmymc.daschner.justin.tools.shovels.ToolBlueShovel;
+import net.playmymc.daschner.justin.tools.shovels.ToolBrownShovel;
+import net.playmymc.daschner.justin.tools.shovels.ToolGreenShovel;
+import net.playmymc.daschner.justin.tools.shovels.ToolIndigoShovel;
+import net.playmymc.daschner.justin.tools.shovels.ToolMaroonShovel;
+import net.playmymc.daschner.justin.tools.shovels.ToolOrangeShovel;
+import net.playmymc.daschner.justin.tools.shovels.ToolPurpleShovel;
+import net.playmymc.daschner.justin.tools.shovels.ToolRedShovel;
+import net.playmymc.daschner.justin.tools.shovels.ToolTealShovel;
+import net.playmymc.daschner.justin.tools.shovels.ToolWhiteShovel;
+import net.playmymc.daschner.justin.tools.shovels.ToolYellowShovel;
 import net.playmymc.daschner.justin.worldgen.MorphWorldGen;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -61,6 +111,7 @@ public class morph
 	//Tree Variables
 	public static Block blockLog;
 	public static Block blockLeaf;
+	
 	public static Item greenMorph;
 	public static Item purpleMorph;
 	public static Item orangeMorph;
@@ -72,6 +123,92 @@ public class morph
 	public static Item whiteMorph;
 	public static Item blackMorph;
 	public static Item brownMorph;
+	
+	//Tools
+	//Pickaxes
+	public static Item yellowPickaxe;
+	public static Item bluePickaxe;
+	public static Item redPickaxe;
+	
+	public static Item greenPickaxe;
+	public static Item purplePickaxe;
+	public static Item orangePickaxe;
+	
+	public static Item tealPickaxe;
+	public static Item indigoPickaxe;
+	public static Item maroonPickaxe;
+	
+	public static Item whitePickaxe;
+	public static Item blackPickaxe;
+	public static Item brownPickaxe;
+	
+	//Shovels
+	public static Item yellowShovel;
+	public static Item blueShovel;
+	public static Item redShovel;
+	
+	public static Item greenShovel;
+	public static Item purpleShovel;
+	public static Item orangeShovel;
+	
+	public static Item tealShovel;
+	public static Item indigoShovel;
+	public static Item maroonShovel;
+	
+	public static Item whiteShovel;
+	public static Item blackShovel;
+	public static Item brownShovel;
+	
+	//Axe
+	public static Item yellowAxe;
+	public static Item blueAxe;
+	public static Item redAxe;
+		
+	public static Item greenAxe;
+	public static Item purpleAxe;
+	public static Item orangeAxe;
+		
+	public static Item tealAxe;
+	public static Item indigoAxe;
+	public static Item maroonAxe;
+		
+	public static Item whiteAxe;
+	public static Item blackAxe;
+	public static Item brownAxe;
+	
+	//Hoe
+	public static Item yellowHoe;
+	public static Item blueHoe;
+	public static Item redHoe;
+		
+	public static Item greenHoe;
+	public static Item purpleHoe;
+	public static Item orangeHoe;
+		
+	public static Item tealHoe;
+	public static Item indigoHoe;
+	public static Item maroonHoe;
+		
+	public static Item whiteHoe;
+	public static Item blackHoe;
+	public static Item brownHoe;
+	
+	//Material
+	static ToolMaterial yellowMaterial = EnumHelper.addToolMaterial("yellowMorphMaterial", 4, 100, 7, 0.0F, 10);
+	static ToolMaterial blueMaterial = EnumHelper.addToolMaterial("blueMorphMaterial", 4, 100, 7, 0.0F, 10);
+	static ToolMaterial redMaterial = EnumHelper.addToolMaterial("redMorphMaterial", 4, 100, 7, 0.0F, 10);
+	
+	static ToolMaterial greenMaterial = EnumHelper.addToolMaterial("greenMorphMaterial", 4, 100, 7, 0.0F, 10);
+	static ToolMaterial purpleMaterial = EnumHelper.addToolMaterial("purpleMorphMaterial", 4, 100, 7, 0.0F, 10);
+	static ToolMaterial orangeMaterial = EnumHelper.addToolMaterial("orangeMorphMaterial", 4, 100, 7, 0.0F, 10);
+	
+	static ToolMaterial tealMaterial = EnumHelper.addToolMaterial("tealMorphMaterial", 4, 100, 7, 0.0F, 10);
+	static ToolMaterial indigoMaterial = EnumHelper.addToolMaterial("indigoMorphMaterial", 4, 100, 7, 0.0F, 10);
+	static ToolMaterial maroonMaterial = EnumHelper.addToolMaterial("maroonMorphMaterial", 4, 100, 7, 0.0F, 10);
+	
+	static ToolMaterial whiteMaterial = EnumHelper.addToolMaterial("whiteMorphMaterial", 4, 100, 7, 0.0F, 10);
+	static ToolMaterial blackMaterial = EnumHelper.addToolMaterial("blackMorphMaterial", 4, 100, 7, 0.0F, 10);
+	static ToolMaterial brownMaterial = EnumHelper.addToolMaterial("brownMorphMaterial", 4, 100, 7, 0.0F, 10);
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
@@ -125,9 +262,6 @@ public class morph
 		register.registerItem(greenMorph);
 		register.registerItem(purpleMorph);
 		register.registerItem(orangeMorph);
-		//Trees
-		blockLog = new BlockLucemLog().setBlockName("Log").setCreativeTab(CreativeTabs.tabBlock);
-		blockLeaf = new BlockLucemLeaves().setBlockName("Leaf").setCreativeTab(CreativeTabs.tabBlock);
 		
 		register.registerItem(tealMorph);
 		register.registerItem(indigoMorph);
@@ -137,6 +271,143 @@ public class morph
 		register.registerItem(blackMorph);
 		register.registerItem(brownMorph);
 		
+		//Tools
+		//Pickaxe
+		yellowPickaxe = new ToolYellowPickaxe(yellowMaterial);
+		bluePickaxe = new ToolBluePickaxe(blueMaterial);
+		redPickaxe = new ToolRedPickaxe(redMaterial);
+		
+		greenPickaxe = new ToolGreenPickaxe(greenMaterial);
+		purplePickaxe = new ToolPurplePickaxe(purpleMaterial);
+		orangePickaxe = new ToolOrangePickaxe(orangeMaterial);
+		
+		tealPickaxe = new ToolTealPickaxe(tealMaterial);
+		indigoPickaxe = new ToolIndigoPickaxe(indigoMaterial);
+		maroonPickaxe = new ToolMaroonPickaxe(maroonMaterial);
+		
+		whitePickaxe = new ToolWhitePickaxe(whiteMaterial);
+		blackPickaxe = new ToolBlackPickaxe(blackMaterial);
+		brownPickaxe = new ToolBrownPickaxe(brownMaterial);
+		
+		register.registerItem(yellowPickaxe);
+		register.registerItem(bluePickaxe);
+		register.registerItem(redPickaxe);
+		
+		register.registerItem(greenPickaxe);
+		register.registerItem(purplePickaxe);
+		register.registerItem(orangePickaxe);
+		
+		register.registerItem(tealPickaxe);
+		register.registerItem(indigoPickaxe);
+		register.registerItem(maroonPickaxe);
+		
+		register.registerItem(whitePickaxe);
+		register.registerItem(blackPickaxe);
+		register.registerItem(brownPickaxe);
+		
+		//Shovel
+		yellowShovel = new ToolYellowShovel(yellowMaterial);
+		blueShovel = new ToolBlueShovel(blueMaterial);
+		redShovel = new ToolRedShovel(redMaterial);
+				
+		greenShovel = new ToolGreenShovel(greenMaterial);
+		purpleShovel = new ToolPurpleShovel(purpleMaterial);
+		orangeShovel = new ToolOrangeShovel(orangeMaterial);
+				
+		tealShovel = new ToolTealShovel(tealMaterial);
+		indigoShovel = new ToolIndigoShovel(indigoMaterial);
+		maroonShovel = new ToolMaroonShovel(maroonMaterial);
+				
+		whiteShovel = new ToolWhiteShovel(whiteMaterial);
+		blackShovel = new ToolBlackShovel(blackMaterial);
+		brownShovel = new ToolBrownShovel(brownMaterial);
+				
+		register.registerItem(yellowShovel);
+		register.registerItem(blueShovel);
+		register.registerItem(redShovel);
+				
+		register.registerItem(greenShovel);
+		register.registerItem(purpleShovel);
+		register.registerItem(orangeShovel);
+				
+		register.registerItem(tealShovel);
+		register.registerItem(indigoShovel);
+		register.registerItem(maroonShovel);
+				
+		register.registerItem(whiteShovel);
+		register.registerItem(blackShovel);
+		register.registerItem(brownShovel);	
+		
+		//Axe
+		yellowAxe = new ToolYellowAxe(yellowMaterial);
+		blueAxe = new ToolBlueAxe(blueMaterial);
+		redAxe = new ToolRedAxe(redMaterial);
+						
+		greenAxe = new ToolGreenAxe(greenMaterial);
+		purpleAxe = new ToolPurpleAxe(purpleMaterial);
+		orangeAxe = new ToolOrangeAxe(orangeMaterial);
+						
+		tealAxe = new ToolTealAxe(tealMaterial);
+		indigoAxe = new ToolIndigoAxe(indigoMaterial);
+		maroonAxe = new ToolMaroonAxe(maroonMaterial);
+						
+		whiteAxe = new ToolWhiteAxe(whiteMaterial);
+		blackAxe = new ToolBlackAxe(blackMaterial);
+		brownAxe = new ToolBrownAxe(brownMaterial);
+						
+		register.registerItem(yellowAxe);
+		register.registerItem(blueAxe);
+		register.registerItem(redAxe);
+						
+		register.registerItem(greenAxe);
+		register.registerItem(purpleAxe);
+		register.registerItem(orangeAxe);
+						
+		register.registerItem(tealAxe);
+		register.registerItem(indigoAxe);
+		register.registerItem(maroonAxe);
+						
+		register.registerItem(whiteAxe);
+		register.registerItem(blackAxe);
+		register.registerItem(brownAxe);
+		
+		//Hoe
+		yellowHoe = new ToolYellowHoe(yellowMaterial);
+		blueHoe = new ToolBlueHoe(blueMaterial);
+		redHoe = new ToolRedHoe(redMaterial);
+								
+		greenHoe = new ToolGreenHoe(greenMaterial);
+		purpleHoe = new ToolPurpleHoe(purpleMaterial);
+		orangeHoe = new ToolOrangeHoe(orangeMaterial);
+								
+		tealHoe = new ToolTealHoe(tealMaterial);
+		indigoHoe = new ToolIndigoHoe(indigoMaterial);
+		maroonHoe = new ToolMaroonHoe(maroonMaterial);
+								
+		whiteHoe = new ToolWhiteHoe(whiteMaterial);
+		blackHoe = new ToolBlackHoe(blackMaterial);
+		brownHoe = new ToolBrownHoe(brownMaterial);
+								
+		register.registerItem(yellowHoe);
+		register.registerItem(blueHoe);
+		register.registerItem(redHoe);
+								
+		register.registerItem(greenHoe);
+		register.registerItem(purpleHoe);
+		register.registerItem(orangeHoe);
+								
+		register.registerItem(tealHoe);
+		register.registerItem(indigoHoe);
+		register.registerItem(maroonHoe);
+								
+		register.registerItem(whiteHoe);
+		register.registerItem(blackHoe);
+		register.registerItem(brownHoe);
+		
+		//Trees
+		blockLog = new BlockLucemLog().setBlockName("Log").setCreativeTab(CreativeTabs.tabBlock);
+		blockLeaf = new BlockLucemLeaves().setBlockName("Leaf").setCreativeTab(CreativeTabs.tabBlock);
+				
 		GameRegistry.registerBlock(blockLog, ItemLogBlocks.class, blockLog.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(blockLeaf, ItemLeafBlocks.class, blockLeaf.getUnlocalizedName().substring(5));
 
@@ -146,6 +417,9 @@ public class morph
 		
 		//Register World Generator
 		register.registerWorldGen();
+		
+		//Register Smelting Recipes
+		register.registerSmeltingRecipes();
 	}
 	
 	
