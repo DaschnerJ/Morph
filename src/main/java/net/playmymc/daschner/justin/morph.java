@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.playmymc.daschner.justin.blocks.BlockGraliteOre;
 import net.playmymc.daschner.justin.blocks.BlockLucemLeaves;
 import net.playmymc.daschner.justin.blocks.BlockLucemLog;
+import net.playmymc.daschner.justin.blocks.BlockSolusOre;
 import net.playmymc.daschner.justin.blocks.BlockTestOre;
 import net.playmymc.daschner.justin.items.ItemBlackMorph;
 import net.playmymc.daschner.justin.items.ItemBlueMorph;
@@ -19,6 +20,8 @@ import net.playmymc.daschner.justin.items.ItemMaroonMorph;
 import net.playmymc.daschner.justin.items.ItemOrangeMorph;
 import net.playmymc.daschner.justin.items.ItemPurpleMorph;
 import net.playmymc.daschner.justin.items.ItemRedMorph;
+import net.playmymc.daschner.justin.items.ItemSolusDust;
+import net.playmymc.daschner.justin.items.ItemSolusMetalicOrb;
 import net.playmymc.daschner.justin.items.ItemTealMorph;
 import net.playmymc.daschner.justin.items.ItemTestIngot;
 import net.playmymc.daschner.justin.items.ItemWhiteMorph;
@@ -41,11 +44,15 @@ public class morph
 	public static Block testOre;
 	
 	public static Block graliteOre;
+	public static Block solusOre;
 	
 	//Item Variables
 	public static Item testIngot;
 	
 	public static Item graliteMorph;
+	public static Item solusDust;
+	
+	public static Item solusMetalicOrb;
 	
 	public static Item yellowMorph;
 	public static Item blueMorph;
@@ -73,15 +80,20 @@ public class morph
 		testOre = new BlockTestOre();
 		
 		graliteOre = new BlockGraliteOre();
+		solusOre = new BlockSolusOre();
 		
 		register.registerBlock(testOre);
 		
 		register.registerBlock(graliteOre);
+		register.registerBlock(solusOre);
 		
 		//Register Items	
 		testIngot = new ItemTestIngot();
 		
 		graliteMorph = new ItemGraliteMorph();
+		
+		solusDust = new ItemSolusDust();
+		solusMetalicOrb = new ItemSolusMetalicOrb();
 		
 		yellowMorph = new ItemYellowMorph();
 		blueMorph = new ItemBlueMorph();
@@ -103,6 +115,9 @@ public class morph
 		
 		register.registerItem(graliteMorph);
 		
+		register.registerItem(solusDust);
+		register.registerItem(solusMetalicOrb);
+		
 		register.registerItem(yellowMorph);
 		register.registerItem(blueMorph);
 		register.registerItem(redMorph);
@@ -121,6 +136,7 @@ public class morph
 		register.registerItem(whiteMorph);
 		register.registerItem(blackMorph);
 		register.registerItem(brownMorph);
+		
 		GameRegistry.registerBlock(blockLog, ItemLogBlocks.class, blockLog.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(blockLeaf, ItemLeafBlocks.class, blockLeaf.getUnlocalizedName().substring(5));
 

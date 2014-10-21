@@ -36,8 +36,7 @@ public class MorphWorldGen implements IWorldGenerator
 	}
 
 	private void generateNether(World world, Random random, int i, int j) {
-		// TODO Auto-generated method stub
-		
+		this.addOreSpawn(morph.solusOre, world, random, i, j, 16, 16, 2+random.nextInt(6), 25, 6, 36);		
 	}
 
 	private void generateSurface(World world, Random random, int i, int j) 
