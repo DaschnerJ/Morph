@@ -36,7 +36,7 @@ public class MorphWorldGen implements IWorldGenerator
 	}
 
 	private void generateNether(World world, Random random, int i, int j) {
-		this.addOreSpawn(morph.solusOre, world, random, i, j, 16, 16, 2+random.nextInt(6), 25, 6, 36);		
+		this.addNetherOreSpawn(morph.solusOre, world, random, i, j, 16, 16, 2+random.nextInt(6), 25, 6, 96);		
 	}
 
 	private void generateSurface(World world, Random random, int i, int j) 
@@ -56,6 +56,15 @@ public class MorphWorldGen implements IWorldGenerator
 			(new WorldGenMinable(block, maxVeinSize)).generate(world, random, posX, posY, posZ);
 		}
 		
+	}
+	
+	private void addNetherOreSpawn(Block block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chanceToSpawn, int minY, int maxY) {
+		for(int i = 0; i < chanceToSpawn; i++) {
+			int posX = blockXPos + random.nextInt(maxX);
+			int posY = minY + random.nextInt(maxY - minY);
+			int posZ = blockZPos + random.nextInt(maxZ);
+			(new WorldGenNetherMinable(block, maxVeinSize)).generate(world, random, posX, posY, posZ);
+		}
 	}
 
 }

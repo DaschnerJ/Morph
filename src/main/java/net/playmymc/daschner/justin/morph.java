@@ -4,7 +4,20 @@ import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
+import net.playmymc.daschner.justin.armor.ItemBlackArmor;
+import net.playmymc.daschner.justin.armor.ItemBlueArmor;
+import net.playmymc.daschner.justin.armor.ItemBrownArmor;
+import net.playmymc.daschner.justin.armor.ItemGreenArmor;
+import net.playmymc.daschner.justin.armor.ItemIndigoArmor;
+import net.playmymc.daschner.justin.armor.ItemMaroonArmor;
+import net.playmymc.daschner.justin.armor.ItemOrangeArmor;
+import net.playmymc.daschner.justin.armor.ItemPurpleArmor;
+import net.playmymc.daschner.justin.armor.ItemRedArmor;
+import net.playmymc.daschner.justin.armor.ItemTealArmor;
+import net.playmymc.daschner.justin.armor.ItemWhiteArmor;
+import net.playmymc.daschner.justin.armor.ItemYellowArmor;
 import net.playmymc.daschner.justin.blocks.BlockGraliteOre;
 import net.playmymc.daschner.justin.blocks.BlockLucemLeaves;
 import net.playmymc.daschner.justin.blocks.BlockLucemLog;
@@ -193,6 +206,67 @@ public class morph
 	public static Item blackHoe;
 	public static Item brownHoe;
 	
+	//Armor
+	public static Item yellowHelmet;
+	public static Item yellowChestplate;
+	public static Item yellowLeggings;
+	public static Item yellowBoots;
+	
+	public static Item blueHelmet;
+	public static Item blueChestplate;
+	public static Item blueLeggings;
+	public static Item blueBoots;
+	
+	public static Item redHelmet;
+	public static Item redChestplate;
+	public static Item redLeggings;
+	public static Item redBoots;
+	
+	public static Item greenHelmet;
+	public static Item greenChestplate;
+	public static Item greenLeggings;
+	public static Item greenBoots;
+	
+	public static Item purpleHelmet;
+	public static Item purpleChestplate;
+	public static Item purpleLeggings;
+	public static Item purpleBoots;
+	
+	public static Item orangeHelmet;
+	public static Item orangeChestplate;
+	public static Item orangeLeggings;
+	public static Item orangeBoots;
+	
+	public static Item tealHelmet;
+	public static Item tealChestplate;
+	public static Item tealLeggings;
+	public static Item tealBoots;
+	
+	public static Item indigoHelmet;
+	public static Item indigoChestplate;
+	public static Item indigoLeggings;
+	public static Item indigoBoots;
+	
+	public static Item maroonHelmet;
+	public static Item maroonChestplate;
+	public static Item maroonLeggings;
+	public static Item maroonBoots;
+	
+	public static Item whiteHelmet;
+	public static Item whiteChestplate;
+	public static Item whiteLeggings;
+	public static Item whiteBoots;
+	
+	public static Item blackHelmet;
+	public static Item blackChestplate;
+	public static Item blackLeggings;
+	public static Item blackBoots;
+	
+	public static Item brownHelmet;
+	public static Item brownChestplate;
+	public static Item brownLeggings;
+	public static Item brownBoots;
+	
 	//Material
 	static ToolMaterial yellowMaterial = EnumHelper.addToolMaterial("yellowMorphMaterial", 4, 100, 7, 0.0F, 10);
 	static ToolMaterial blueMaterial = EnumHelper.addToolMaterial("blueMorphMaterial", 4, 100, 7, 0.0F, 10);
@@ -209,6 +283,22 @@ public class morph
 	static ToolMaterial whiteMaterial = EnumHelper.addToolMaterial("whiteMorphMaterial", 4, 100, 7, 0.0F, 10);
 	static ToolMaterial blackMaterial = EnumHelper.addToolMaterial("blackMorphMaterial", 4, 100, 7, 0.0F, 10);
 	static ToolMaterial brownMaterial = EnumHelper.addToolMaterial("brownMorphMaterial", 4, 100, 7, 0.0F, 10);
+	
+	static ArmorMaterial yellowArmorMaterial = EnumHelper.addArmorMaterial("yellowArmorMaterial", 20, new int[]{2, 6, 5, 2}, 10);
+	static ArmorMaterial blueArmorMaterial = EnumHelper.addArmorMaterial("blueArmorMaterial", 20, new int[]{2, 6, 5, 2}, 10);
+	static ArmorMaterial redArmorMaterial = EnumHelper.addArmorMaterial("redArmorMaterial", 20, new int[]{2, 6, 5, 2}, 10);
+	
+	static ArmorMaterial greenArmorMaterial = EnumHelper.addArmorMaterial("greenArmorMaterial", 20, new int[]{2, 6, 5, 2}, 10);
+	static ArmorMaterial purpleArmorMaterial = EnumHelper.addArmorMaterial("purpleArmorMaterial", 20, new int[]{2, 6, 5, 2}, 10);
+	static ArmorMaterial orangeArmorMaterial = EnumHelper.addArmorMaterial("orangeArmorMaterial", 20, new int[]{2, 6, 5, 2}, 10);
+	
+	static ArmorMaterial tealArmorMaterial = EnumHelper.addArmorMaterial("tealArmorMaterial", 20, new int[]{2, 6, 5, 2}, 10);
+	static ArmorMaterial indigoArmorMaterial = EnumHelper.addArmorMaterial("indigoArmorMaterial", 20, new int[]{2, 6, 5, 2}, 10);
+	static ArmorMaterial maroonArmorMaterial = EnumHelper.addArmorMaterial("maroonArmorMaterial", 20, new int[]{2, 6, 5, 2}, 10);
+	
+	static ArmorMaterial whiteArmorMaterial = EnumHelper.addArmorMaterial("whiteArmorMaterial", 20, new int[]{2, 6, 5, 2}, 10);
+	static ArmorMaterial blackArmorMaterial = EnumHelper.addArmorMaterial("blackArmorMaterial", 20, new int[]{2, 6, 5, 2}, 10);
+	static ArmorMaterial brownArmorMaterial = EnumHelper.addArmorMaterial("brownArmorMaterial", 20, new int[]{2, 6, 5, 2}, 10);
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
@@ -403,6 +493,127 @@ public class morph
 		register.registerItem(whiteHoe);
 		register.registerItem(blackHoe);
 		register.registerItem(brownHoe);
+		
+		//Armor
+		yellowHelmet = new ItemYellowArmor(yellowArmorMaterial, 0, "yellowHelmet");
+		yellowChestplate = new ItemYellowArmor(yellowArmorMaterial, 1, "yellowChestplate");
+		yellowLeggings = new ItemYellowArmor(yellowArmorMaterial, 2, "yellowLeggings");
+		yellowBoots = new ItemYellowArmor(yellowArmorMaterial, 3, "yellowBoots");
+		
+		blueHelmet = new ItemBlueArmor(blueArmorMaterial, 0, "blueHelmet");
+		blueChestplate = new ItemBlueArmor(blueArmorMaterial, 1, "blueChestplate");
+		blueLeggings = new ItemBlueArmor(blueArmorMaterial, 2, "blueLeggings");
+		blueBoots = new ItemBlueArmor(blueArmorMaterial, 3, "blueBoots");
+		
+		redHelmet = new ItemRedArmor(redArmorMaterial, 0, "redHelmet");
+		redChestplate = new ItemRedArmor(redArmorMaterial, 1, "redChestplate");
+		redLeggings = new ItemRedArmor(redArmorMaterial, 2, "redLeggings");
+		redBoots = new ItemRedArmor(redArmorMaterial, 3, "redBoots");
+		
+		greenHelmet = new ItemGreenArmor(greenArmorMaterial, 0, "greenHelmet");
+		greenChestplate = new ItemGreenArmor(greenArmorMaterial, 1, "greenChestplate");
+		greenLeggings = new ItemGreenArmor(greenArmorMaterial, 2, "greenLeggings");
+		greenBoots = new ItemGreenArmor(greenArmorMaterial, 3, "greenBoots");
+		
+		purpleHelmet = new ItemPurpleArmor(purpleArmorMaterial, 0, "purpleHelmet");
+		purpleChestplate = new ItemPurpleArmor(purpleArmorMaterial, 1, "purpleChestplate");
+		purpleLeggings = new ItemPurpleArmor(purpleArmorMaterial, 2, "purpleLeggings");
+		purpleBoots = new ItemPurpleArmor(purpleArmorMaterial, 3, "purpleBoots");
+		
+		orangeHelmet = new ItemOrangeArmor(orangeArmorMaterial, 0, "orangeHelmet");
+		orangeChestplate = new ItemOrangeArmor(orangeArmorMaterial, 1, "orangeChestplate");
+		orangeLeggings = new ItemOrangeArmor(orangeArmorMaterial, 2, "orangeLeggings");
+		orangeBoots = new ItemOrangeArmor(orangeArmorMaterial, 3, "orangeBoots");
+		
+		tealHelmet = new ItemTealArmor(tealArmorMaterial, 0, "tealHelmet");
+		tealChestplate = new ItemTealArmor(tealArmorMaterial, 1, "tealChestplate");
+		tealLeggings = new ItemTealArmor(tealArmorMaterial, 2, "tealLeggings");
+		tealBoots = new ItemTealArmor(tealArmorMaterial, 3, "tealBoots");
+		
+		indigoHelmet = new ItemIndigoArmor(indigoArmorMaterial, 0, "indigoHelmet");
+		indigoChestplate = new ItemIndigoArmor(indigoArmorMaterial, 1, "indigoChestplate");
+		indigoLeggings = new ItemIndigoArmor(indigoArmorMaterial, 2, "indigoLeggings");
+		indigoBoots = new ItemIndigoArmor(indigoArmorMaterial, 3, "indigoBoots");
+		
+		maroonHelmet = new ItemMaroonArmor(maroonArmorMaterial, 0, "maroonHelmet");
+		maroonChestplate = new ItemMaroonArmor(maroonArmorMaterial, 1, "maroonChestplate");
+		maroonLeggings = new ItemMaroonArmor(maroonArmorMaterial, 2, "maroonLeggings");
+		maroonBoots = new ItemMaroonArmor(maroonArmorMaterial, 3, "maroonBoots");
+		
+		whiteHelmet = new ItemWhiteArmor(whiteArmorMaterial, 0, "whiteHelmet");
+		whiteChestplate = new ItemWhiteArmor(whiteArmorMaterial, 1, "whiteChestplate");
+		whiteLeggings = new ItemWhiteArmor(whiteArmorMaterial, 2, "whiteLeggings");
+		whiteBoots = new ItemWhiteArmor(whiteArmorMaterial, 3, "whiteBoots");
+		
+		blackHelmet = new ItemBlackArmor(blackArmorMaterial, 0, "blackHelmet");
+		blackChestplate = new ItemBlackArmor(blackArmorMaterial, 1, "blackChestplate");
+		blackLeggings = new ItemBlackArmor(blackArmorMaterial, 2, "blackLeggings");
+		blackBoots = new ItemBlackArmor(blackArmorMaterial, 3, "blackBoots");
+		
+		brownHelmet = new ItemBrownArmor(brownArmorMaterial, 0, "brownHelmet");
+		brownChestplate = new ItemBrownArmor(brownArmorMaterial, 1, "brownChestplate");
+		brownLeggings = new ItemBrownArmor(brownArmorMaterial, 2, "brownLeggings");
+		brownBoots = new ItemBrownArmor(brownArmorMaterial, 3, "brownBoots");
+		
+		register.registerItem(yellowHelmet);
+		register.registerItem(yellowChestplate);
+		register.registerItem(yellowLeggings);
+		register.registerItem(yellowBoots);
+		
+		register.registerItem(blueHelmet);
+		register.registerItem(blueChestplate);
+		register.registerItem(blueLeggings);
+		register.registerItem(blueBoots);
+		
+		register.registerItem(redHelmet);
+		register.registerItem(redChestplate);
+		register.registerItem(redLeggings);
+		register.registerItem(redBoots);
+		
+		register.registerItem(greenHelmet);
+		register.registerItem(greenChestplate);
+		register.registerItem(greenLeggings);
+		register.registerItem(greenBoots);
+		
+		register.registerItem(purpleHelmet);
+		register.registerItem(purpleChestplate);
+		register.registerItem(purpleLeggings);
+		register.registerItem(purpleBoots);
+		
+		register.registerItem(orangeHelmet);
+		register.registerItem(orangeChestplate);
+		register.registerItem(orangeLeggings);
+		register.registerItem(orangeBoots);	
+		
+		register.registerItem(tealHelmet);
+		register.registerItem(tealChestplate);
+		register.registerItem(tealLeggings);
+		register.registerItem(tealBoots);
+		
+		register.registerItem(indigoHelmet);
+		register.registerItem(indigoChestplate);
+		register.registerItem(indigoLeggings);
+		register.registerItem(indigoBoots);
+		
+		register.registerItem(maroonHelmet);
+		register.registerItem(maroonChestplate);
+		register.registerItem(maroonLeggings);
+		register.registerItem(maroonBoots);
+		
+		register.registerItem(whiteHelmet);
+		register.registerItem(whiteChestplate);
+		register.registerItem(whiteLeggings);
+		register.registerItem(whiteBoots);
+		
+		register.registerItem(blackHelmet);
+		register.registerItem(blackChestplate);
+		register.registerItem(blackLeggings);
+		register.registerItem(blackBoots);
+		
+		register.registerItem(brownHelmet);
+		register.registerItem(brownChestplate);
+		register.registerItem(brownLeggings);
+		register.registerItem(brownBoots);	
 		
 		//Trees
 		blockLog = new BlockLucemLog().setBlockName("Log").setCreativeTab(CreativeTabs.tabBlock);
