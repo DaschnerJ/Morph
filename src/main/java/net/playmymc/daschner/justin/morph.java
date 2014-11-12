@@ -19,6 +19,7 @@ import net.playmymc.daschner.justin.armor.ItemTealArmor;
 import net.playmymc.daschner.justin.armor.ItemWhiteArmor;
 import net.playmymc.daschner.justin.armor.ItemYellowArmor;
 import net.playmymc.daschner.justin.blocks.BlockGraliteOre;
+import net.playmymc.daschner.justin.blocks.BlockLadiusOre;
 import net.playmymc.daschner.justin.blocks.BlockLucemLeaves;
 import net.playmymc.daschner.justin.blocks.BlockLucemLog;
 import net.playmymc.daschner.justin.blocks.BlockSolusOre;
@@ -108,6 +109,7 @@ public class morph
 	
 	public static Block graliteOre;
 	public static Block solusOre;
+	public static Block ladiusOre;
 	
 	//Item Variables
 	public static Item testIngot;
@@ -308,11 +310,13 @@ public class morph
 		
 		graliteOre = new BlockGraliteOre();
 		solusOre = new BlockSolusOre();
+		ladiusOre = new BlockLadiusOre();
 		
 		register.registerBlock(testOre);
 		
 		register.registerBlock(graliteOre);
 		register.registerBlock(solusOre);
+		register.registerBlock(ladiusOre);
 		
 		//Register Items	
 		testIngot = new ItemTestIngot();

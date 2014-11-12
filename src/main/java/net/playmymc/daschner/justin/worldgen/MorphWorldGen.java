@@ -43,7 +43,7 @@ public class MorphWorldGen implements IWorldGenerator
 	{
 		//this.addOreSpawn(Ore, World, Random, x, y, chunkArea, chunkArea, min+Max vein size, chance %, minHeight, maxHeight);
 		this.addOreSpawn(morph.graliteOre, world, random, i, j, 16, 16, 2+random.nextInt(6), 25, 6, 36);
-		
+		this.addOreSpawn(morph.ladiusOre, world, random, i, j, 16, 16, 2+random.nextInt(6), 6, 6, 30);
 	}
 
 	private void addOreSpawn(Block block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chanceToSpawn, int minY, int maxY) 
